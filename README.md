@@ -33,16 +33,32 @@ I train my models on a dataset which contained 11 classes: 10 yoga poses and 1 n
   11 Triangle  - 
   
 Training dataset included 100 images for each class. 
-Most images in the training dataset were made on white background by people wearing contrast clothes.
+Most images in the training dataset were made on monotonous background by people wearing contrast clothes.
 Pictures represented a photographs taken from different angles and with varying zoom.
 
 <div align="center">
-      <img height="300" src="images/schema-system.png">
+      <img height="300" src="images/train_mountain.jpg">
+      <img height="300" src="images/train_triangle.jpg">
+      <img height="300" src="images/train_seatedforwardbend.jpg">
 </div>
 
 I got two test sets:
   1 Yoga poses that resemble train data set style, i.e. white background and contrast clothes.
+  
+<div align="center">
+      <img height="300" src="images/test_mountain.jpg">
+      <img height="300" src="images/test_triangle.jpg">
+      <img height="300" src="images/test_seatedforwardbend.jpg">
+</div>
+  
   2 Images of yoga poses taken by real people not necessarily on white background.
+  
+<div align="center">
+      <img height="300" src="images/galv_mountain.jpg">
+      <img height="300" src="images/galv_triangle.jpg">
+      <img height="300" src="images/galv_seatedforwardbend.jpg">
+      <img height="300" src="images/galv_tree.jpg">
+</div>
   
 ## Models Description
 
@@ -57,23 +73,23 @@ The dataset of 100 images per class is relatively small dataset. Therefore I hav
 
 Below is the architechture of the 'from-scratch' CNN:
 <div align="center">
-      <img height="300" src="images/architecture_scratch.png">
+      <img height="300" src="images/from_scratch.png">
 </div>
 
 Model training accuracy for training and validataion data with respect to the number of epochs:
 <div align="center">
-      <img height="300" src="images/acc_scratch.png">
+      <img height="300" src="images/aug_4L_acc.png">
 </div>
 
 ### Transfer learning
 Below is the architechture of the 'transfer learning' CNN:
 <div align="center">
-      <img height="300" src="images/architecture_transfer.png">
+      <img height="300" src="images/vgg19.png">
 </div>
 
 Model training accuracy for training and validataion data with respect to the number of epochs:
 <div align="center">
-      <img height="300" src="images/acc_transfer.png">
+      <img height="300" src="images/tr_learn_acc.png">
 </div>
 
 "Transfer learning" convolutional network shows better performance on validation data: 71% accuracy versus 58% for the "from scratch" model. 
@@ -88,14 +104,15 @@ GalvanizeNYC12 cohort test: 0.58
 The confusion matrices indicate that the model is confused with "triangular poses". For example Warrior 1 and Warrior 2 look very similar and mainly differ with hands position and upper body rotation. Triangle pose and bridge also can look similar  Warrior 1 and 2 poses. 
 
 <div align="center">
-      <img height="300" src="images/acc_transfer.png">
+      <img height="300" src="images/from_scratch_cm.png">
+      <img height="300" src="images/tr_learn_cm.png">
 </div>
 
 ## Conclusion
  - The "from scratch" model works slightly worse that the "transfer learning" VGG19 model
  - Confusion matrices show that "triangular" poses are confused the most
 
-## Future Deriction
+## Future Directions
 Model improvement strategies:
   - Training dataset increase
   - Separate training for triangular, standing, siffing poses
