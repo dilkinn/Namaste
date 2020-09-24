@@ -2,7 +2,7 @@
 
 Here is the link to my presentation slides: https://docs.google.com/presentation/d/1u6QkRlfu72sQDPaxyLaqZl_52xW-Sj13buVQwVe6scs/edit?usp=drive_web&ouid=118087232464696496278
 
-Yoga is great for both physical and mental health. There's no challenging aspect in yoga, everyone can practice at it's one paste. What important in the path, not the goal. 
+Yoga is great for both physical and mental health. There's no challenging aspect in yoga, everyone can practice at it's one pace. What important in the path, not the goal. 
 
 Despite I have been practicing yoga for 10 years, I cannot memorize sanskrit yoga poses names and I can only name couple of those. I can bet I am not the only one.
 
